@@ -33,9 +33,14 @@ class DeclarationViewController: UIViewController {
         createButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5).isActive = true
         createButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         createButton.backgroundColor = .systemBlue
+        createButton.addTarget(self, action: #selector(createButtonDidTap), for: .touchUpInside)
         
     }
-
+    
+    // MARK: - User Actions
+    @objc func createButtonDidTap() {
+        print(nationalIdTextField.text)
+    }
 
 }
 
