@@ -14,6 +14,9 @@ class DeclarationViewController: UIViewController {
     private lazy var nationalIdTextField = UITextField()
     private lazy var createButton = UIButton()
 
+    // MARK: - Properties
+    private let declarationService = DeclarationService()
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +38,22 @@ class DeclarationViewController: UIViewController {
         createButton.backgroundColor = .systemBlue
         createButton.addTarget(self, action: #selector(createButtonDidTap), for: .touchUpInside)
         
+        declarationService.delegate = self
     }
     
     // MARK: - User Actions
     @objc func createButtonDidTap() {
-        print(nationalIdTextField.text)
+        declarationService.createDeclaration(nationalId: nationalIdTextField.text)
     }
-
 }
 
+// MARK: - Delegates
+extension DeclarationViewController: DeclarationServiceDelegate {
+    func declarationCreated() {
+        print("Created")
+    }
+    
+    func declarationFailed() {
+        print("Failed")
+    }
+}

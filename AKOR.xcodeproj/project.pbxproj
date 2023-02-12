@@ -12,6 +12,7 @@
 		A73B70EB2997D69100FD64DE /* DeclarationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73B70EA2997D69100FD64DE /* DeclarationViewController.swift */; };
 		A73B70F02997D69400FD64DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A73B70EF2997D69400FD64DE /* Assets.xcassets */; };
 		A73B70F32997D69400FD64DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A73B70F12997D69400FD64DE /* LaunchScreen.storyboard */; };
+		A79DFE522998FB8E009EA831 /* DeclarationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DFE512998FB8D009EA831 /* DeclarationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		A73B70EF2997D69400FD64DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A73B70F22997D69400FD64DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A73B70F42997D69400FD64DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A79DFE512998FB8D009EA831 /* DeclarationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclarationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				A73B70E62997D69100FD64DE /* AppDelegate.swift */,
 				A73B70E82997D69100FD64DE /* SceneDelegate.swift */,
 				A73B70EA2997D69100FD64DE /* DeclarationViewController.swift */,
+				A79DFE512998FB8D009EA831 /* DeclarationService.swift */,
 				A73B70EF2997D69400FD64DE /* Assets.xcassets */,
 				A73B70F12997D69400FD64DE /* LaunchScreen.storyboard */,
 				A73B70F42997D69400FD64DE /* Info.plist */,
@@ -136,6 +139,7 @@
 			files = (
 				A73B70EB2997D69100FD64DE /* DeclarationViewController.swift in Sources */,
 				A73B70E72997D69100FD64DE /* AppDelegate.swift in Sources */,
+				A79DFE522998FB8E009EA831 /* DeclarationService.swift in Sources */,
 				A73B70E92997D69100FD64DE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
