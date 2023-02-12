@@ -13,7 +13,19 @@
 		A73B70F02997D69400FD64DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A73B70EF2997D69400FD64DE /* Assets.xcassets */; };
 		A73B70F32997D69400FD64DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A73B70F12997D69400FD64DE /* LaunchScreen.storyboard */; };
 		A79DFE522998FB8E009EA831 /* DeclarationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DFE512998FB8D009EA831 /* DeclarationService.swift */; };
+		A79DFE5A2998FFDC009EA831 /* AKORTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DFE592998FFDC009EA831 /* AKORTests.swift */; };
+		A79DFE6129990094009EA831 /* DeclarationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DFE6029990094009EA831 /* DeclarationServiceTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A79DFE5B2998FFDC009EA831 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A73B70DB2997D69100FD64DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A73B70E22997D69100FD64DE;
+			remoteInfo = AKOR;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A73B70E32997D69100FD64DE /* AKOR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AKOR.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +36,20 @@
 		A73B70F22997D69400FD64DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A73B70F42997D69400FD64DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A79DFE512998FB8D009EA831 /* DeclarationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclarationService.swift; sourceTree = "<group>"; };
+		A79DFE572998FFDC009EA831 /* AKORTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AKORTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A79DFE592998FFDC009EA831 /* AKORTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKORTests.swift; sourceTree = "<group>"; };
+		A79DFE6029990094009EA831 /* DeclarationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclarationServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A73B70E02997D69100FD64DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79DFE542998FFDC009EA831 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				A73B70E52997D69100FD64DE /* AKOR */,
+				A79DFE582998FFDC009EA831 /* AKORTests */,
 				A73B70E42997D69100FD64DE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				A73B70E32997D69100FD64DE /* AKOR.app */,
+				A79DFE572998FFDC009EA831 /* AKORTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +89,15 @@
 				A73B70F42997D69400FD64DE /* Info.plist */,
 			);
 			path = AKOR;
+			sourceTree = "<group>";
+		};
+		A79DFE582998FFDC009EA831 /* AKORTests */ = {
+			isa = PBXGroup;
+			children = (
+				A79DFE592998FFDC009EA831 /* AKORTests.swift */,
+				A79DFE6029990094009EA831 /* DeclarationServiceTests.swift */,
+			);
+			path = AKORTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +120,24 @@
 			productReference = A73B70E32997D69100FD64DE /* AKOR.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A79DFE562998FFDC009EA831 /* AKORTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A79DFE5D2998FFDC009EA831 /* Build configuration list for PBXNativeTarget "AKORTests" */;
+			buildPhases = (
+				A79DFE532998FFDC009EA831 /* Sources */,
+				A79DFE542998FFDC009EA831 /* Frameworks */,
+				A79DFE552998FFDC009EA831 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A79DFE5C2998FFDC009EA831 /* PBXTargetDependency */,
+			);
+			name = AKORTests;
+			productName = AKORTests;
+			productReference = A79DFE572998FFDC009EA831 /* AKORTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +150,10 @@
 				TargetAttributes = {
 					A73B70E22997D69100FD64DE = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					A79DFE562998FFDC009EA831 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = A73B70E22997D69100FD64DE;
 					};
 				};
 			};
@@ -116,6 +171,7 @@
 			projectRoot = "";
 			targets = (
 				A73B70E22997D69100FD64DE /* AKOR */,
+				A79DFE562998FFDC009EA831 /* AKORTests */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +183,13 @@
 			files = (
 				A73B70F32997D69400FD64DE /* LaunchScreen.storyboard in Resources */,
 				A73B70F02997D69400FD64DE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A79DFE552998FFDC009EA831 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +207,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A79DFE532998FFDC009EA831 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A79DFE6129990094009EA831 /* DeclarationServiceTests.swift in Sources */,
+				A79DFE5A2998FFDC009EA831 /* AKORTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A79DFE5C2998FFDC009EA831 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A73B70E22997D69100FD64DE /* AKOR */;
+			targetProxy = A79DFE5B2998FFDC009EA831 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A73B70F12997D69400FD64DE /* LaunchScreen.storyboard */ = {
@@ -328,6 +408,42 @@
 			};
 			name = Release;
 		};
+		A79DFE5E2998FFDC009EA831 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RZB5WTQ7UH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hakanor.AKORTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AKOR.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AKOR";
+			};
+			name = Debug;
+		};
+		A79DFE5F2998FFDC009EA831 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RZB5WTQ7UH;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hakanor.AKORTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AKOR.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AKOR";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -345,6 +461,15 @@
 			buildConfigurations = (
 				A73B70F82997D69400FD64DE /* Debug */,
 				A73B70F92997D69400FD64DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A79DFE5D2998FFDC009EA831 /* Build configuration list for PBXNativeTarget "AKORTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A79DFE5E2998FFDC009EA831 /* Debug */,
+				A79DFE5F2998FFDC009EA831 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
