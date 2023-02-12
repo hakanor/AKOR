@@ -80,13 +80,10 @@
 		A73B70E52997D69100FD64DE /* AKOR */ = {
 			isa = PBXGroup;
 			children = (
-				A73B70E62997D69100FD64DE /* AppDelegate.swift */,
-				A73B70E82997D69100FD64DE /* SceneDelegate.swift */,
 				A73B70EA2997D69100FD64DE /* DeclarationViewController.swift */,
 				A79DFE512998FB8D009EA831 /* DeclarationService.swift */,
-				A73B70EF2997D69400FD64DE /* Assets.xcassets */,
-				A73B70F12997D69400FD64DE /* LaunchScreen.storyboard */,
-				A73B70F42997D69400FD64DE /* Info.plist */,
+				A79DFE622999223D009EA831 /* App */,
+				A79DFE6329992246009EA831 /* Resources */,
 			);
 			path = AKOR;
 			sourceTree = "<group>";
@@ -98,6 +95,25 @@
 				A79DFE6029990094009EA831 /* DeclarationServiceTests.swift */,
 			);
 			path = AKORTests;
+			sourceTree = "<group>";
+		};
+		A79DFE622999223D009EA831 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A73B70E62997D69100FD64DE /* AppDelegate.swift */,
+				A73B70E82997D69100FD64DE /* SceneDelegate.swift */,
+				A73B70F42997D69400FD64DE /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A79DFE6329992246009EA831 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A73B70F12997D69400FD64DE /* LaunchScreen.storyboard */,
+				A73B70EF2997D69400FD64DE /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
