@@ -10,9 +10,25 @@ import UIKit
 class DeclarationViewController: UIViewController {
     
     // MARK: - Subviews
-    
-    private lazy var nationalIdTextField = UITextField()
-    private lazy var createButton = UIButton()
+    private lazy var nationalIdTextField = createTextField(placeholder: "National ID")
+    private lazy var nameTextField = createTextField(placeholder: "Name")
+    private lazy var surnameTextField = createTextField(placeholder: "Surname")
+    private lazy var createButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .systemBlue
+        button.addTarget(self, action: #selector(createButtonDidTap), for: .touchUpInside)
+        return button
+    }()
+    private lazy var formStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.alignment = .fill
+        stackView.distribution = .fill
+        stackView.spacing = 16
+        return stackView
+    }()
 
     // MARK: - Properties
     private let declarationService = DeclarationService()
@@ -21,24 +37,8 @@ class DeclarationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        nationalIdTextField.translatesAutoresizingMaskIntoConstraints = false
-        createButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(nationalIdTextField)
-        view.addSubview(createButton)
-        nationalIdTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        nationalIdTextField.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        nationalIdTextField.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.75).isActive = true
-        nationalIdTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        nationalIdTextField.backgroundColor = .systemBlue
-        
-        createButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        createButton.topAnchor.constraint(equalTo: nationalIdTextField.bottomAnchor, constant: 16).isActive = true
-        createButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5).isActive = true
-        createButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        createButton.backgroundColor = .systemBlue
-        createButton.addTarget(self, action: #selector(createButtonDidTap), for: .touchUpInside)
-        
         declarationService.delegate = self
+        setupViews()
     }
     
     // MARK: - User Actions
@@ -55,5 +55,35 @@ extension DeclarationViewController: DeclarationServiceDelegate {
     
     func declarationFailed() {
         print("Failed")
+    }
+}
+
+// MARK: - Subview Factory
+extension DeclarationViewController {
+    private func createTextField(placeholder: String) -> UITextField {
+        let textField = UITextField()
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.systemBlue.cgColor
+        textField.backgroundColor = .white
+        textField.textColor = .darkText
+        textField.font = .systemFont(ofSize: 16)
+        textField.placeholder = placeholder
+        textField.layer.cornerRadius = 8
+        return textField
+    }
+}
+
+// MARK: - Setup
+extension DeclarationViewController {
+    private func setupViews() {
+        view.addSubview(formStackView)
+        formStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        formStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32).isActive = true
+        formStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -32).isActive = true
+        
+        [nationalIdTextField, nameTextField, surnameTextField, createButton].forEach { subview in
+            formStackView.addArrangedSubview(subview)
+            subview.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        }
     }
 }

@@ -14,7 +14,7 @@ final class DeclarationService {
     weak var delegate: DeclarationServiceDelegate?
     
     func createDeclaration(nationalId: String?) {
-        if (nationalId?.count == 11) {
+        if nationalId?.count == 11 {
             delegate?.declarationCreated()
         } else {
             delegate?.declarationFailed()
