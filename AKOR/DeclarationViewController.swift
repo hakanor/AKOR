@@ -10,9 +10,10 @@ import UIKit
 class DeclarationViewController: UIViewController {
     
     // MARK: - Subviews
-    private lazy var nationalIdTextField = createTextField(placeholder: "National ID")
-    private lazy var nameTextField = createTextField(placeholder: "Name")
-    private lazy var surnameTextField = createTextField(placeholder: "Surname")
+    private lazy var nationalIdTextField = FormTextField(placeholder: "NationalID", formatter: NationalIdFormatter())
+    private lazy var nameTextField = FormTextField(placeholder: "Name")
+    private lazy var surnameTextField = FormTextField(placeholder: "Surname")
+    
     private lazy var createButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -58,21 +59,6 @@ extension DeclarationViewController: DeclarationServiceDelegate {
     }
 }
 
-// MARK: - Subview Factory
-extension DeclarationViewController {
-    private func createTextField(placeholder: String) -> UITextField {
-        let textField = UITextField()
-        textField.layer.borderWidth = 1
-        textField.layer.borderColor = UIColor.systemBlue.cgColor
-        textField.backgroundColor = .white
-        textField.textColor = .darkText
-        textField.font = .systemFont(ofSize: 16)
-        textField.placeholder = placeholder
-        textField.layer.cornerRadius = 8
-        return textField
-    }
-}
-
 // MARK: - Setup
 extension DeclarationViewController {
     private func setupViews() {
@@ -87,3 +73,4 @@ extension DeclarationViewController {
         }
     }
 }
+
