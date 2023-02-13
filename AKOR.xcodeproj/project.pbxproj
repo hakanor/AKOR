@@ -15,6 +15,10 @@
 		A79DFE522998FB8E009EA831 /* DeclarationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DFE512998FB8D009EA831 /* DeclarationService.swift */; };
 		A79DFE5A2998FFDC009EA831 /* AKORTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DFE592998FFDC009EA831 /* AKORTests.swift */; };
 		A79DFE6129990094009EA831 /* DeclarationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DFE6029990094009EA831 /* DeclarationServiceTests.swift */; };
+		A79DFE65299AB17B009EA831 /* NationalIdFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DFE64299AB17B009EA831 /* NationalIdFormatter.swift */; };
+		A79DFE67299AB430009EA831 /* NationalIdFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DFE66299AB430009EA831 /* NationalIdFormatterTests.swift */; };
+		A79DFE69299AD858009EA831 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DFE68299AD858009EA831 /* FormTextField.swift */; };
+		A79DFE6B299ADDA5009EA831 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DFE6A299ADDA5009EA831 /* Formatter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +43,10 @@
 		A79DFE572998FFDC009EA831 /* AKORTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AKORTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79DFE592998FFDC009EA831 /* AKORTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKORTests.swift; sourceTree = "<group>"; };
 		A79DFE6029990094009EA831 /* DeclarationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclarationServiceTests.swift; sourceTree = "<group>"; };
+		A79DFE64299AB17B009EA831 /* NationalIdFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationalIdFormatter.swift; sourceTree = "<group>"; };
+		A79DFE66299AB430009EA831 /* NationalIdFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationalIdFormatterTests.swift; sourceTree = "<group>"; };
+		A79DFE68299AD858009EA831 /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
+		A79DFE6A299ADDA5009EA831 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +90,12 @@
 			children = (
 				A73B70EA2997D69100FD64DE /* DeclarationViewController.swift */,
 				A79DFE512998FB8D009EA831 /* DeclarationService.swift */,
+				A79DFE64299AB17B009EA831 /* NationalIdFormatter.swift */,
 				A73B70F42997D69400FD64DE /* Info.plist */,
 				A79DFE622999223D009EA831 /* App */,
 				A79DFE6329992246009EA831 /* Resources */,
+				A79DFE68299AD858009EA831 /* FormTextField.swift */,
+				A79DFE6A299ADDA5009EA831 /* Formatter.swift */,
 			);
 			path = AKOR;
 			sourceTree = "<group>";
@@ -94,6 +105,7 @@
 			children = (
 				A79DFE592998FFDC009EA831 /* AKORTests.swift */,
 				A79DFE6029990094009EA831 /* DeclarationServiceTests.swift */,
+				A79DFE66299AB430009EA831 /* NationalIdFormatterTests.swift */,
 			);
 			path = AKORTests;
 			sourceTree = "<group>";
@@ -217,9 +229,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A73B70EB2997D69100FD64DE /* DeclarationViewController.swift in Sources */,
+				A79DFE69299AD858009EA831 /* FormTextField.swift in Sources */,
+				A79DFE6B299ADDA5009EA831 /* Formatter.swift in Sources */,
 				A73B70E72997D69100FD64DE /* AppDelegate.swift in Sources */,
 				A79DFE522998FB8E009EA831 /* DeclarationService.swift in Sources */,
 				A73B70E92997D69100FD64DE /* SceneDelegate.swift in Sources */,
+				A79DFE65299AB17B009EA831 /* NationalIdFormatter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +244,7 @@
 			files = (
 				A79DFE6129990094009EA831 /* DeclarationServiceTests.swift in Sources */,
 				A79DFE5A2998FFDC009EA831 /* AKORTests.swift in Sources */,
+				A79DFE67299AB430009EA831 /* NationalIdFormatterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

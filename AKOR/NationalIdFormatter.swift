@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class NationalIdFormatter {
+final class NationalIdFormatter: Formatter {
     public func format(text: String) -> String {
         if text.count > 11 {
             return String(text.prefix(11))
