@@ -21,37 +21,39 @@ final class NationalIdFormatterTests: XCTestCase {
         try super.tearDownWithError()
     }
     
-    func test_national_id_formatter_should_inform_success_when_national_id_is_11_char() {
+    func test_national_id_formatter_should_not_remove_chars_when_national_id_is_11_char() {
         // Given
-        let nationalId = "12345678912"
+        let validNationalId = "12345678912"
         
         // When
-        sut.format(text: nationalId)
+        let output = sut.format(text: validNationalId)
         
         // Then
-        XCTAssertEqual(sut.format(text: nationalId),"12345678912")
+        XCTAssertEqual(output, validNationalId)
     }
     
-    func test_national_id_formatter_should_inform_success_when_national_id_is_under_11_char() {
+    func test_national_id_formatter_should_remove_overflowed_chars_when_national_id_is_above_11_char() {
         // Given
-        let nationalId = "123456789123"
+        let overflowNationalId = "123456789123"
+        let expectedNationalId = "12345678912"
         
         // When
-        sut.format(text: nationalId)
+        let output = sut.format(text: overflowNationalId)
         
         // Then
-        XCTAssertEqual(sut.format(text: nationalId),"12345678912")
+        XCTAssertEqual(output, expectedNationalId)
     }
     
-    func test_national_id_formatter_should_inform_success_when_national_id_has_only_numeric_chars() {
+    func test_national_id_formatter_should_remove_non_numeric_chars_when_national_id_has_not_only_numeric_chars() {
         // Given
-        let nationalId = "12345a7891_"
+        let alphaNumericNationalId = "12345a7891_"
+        let expectedNationalId = "123457891"
         
         // When
-        sut.format(text: nationalId)
+        let output = sut.format(text: alphaNumericNationalId)
         
         // Then
-        XCTAssertEqual(sut.format(text: nationalId),"123457891")
+        XCTAssertEqual(output, expectedNationalId)
     }
     
 }
