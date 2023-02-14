@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DeclarationViewController: UIViewController {
+class DeclarationViewController: UIViewController, AlertDisplayable, LoaderDisplayable {
     
     // MARK: - Subviews
     private lazy var nationalIdTextField = FormTextField(placeholder: "NationalID", formatter: NationalIdFormatter())
@@ -44,6 +44,7 @@ class DeclarationViewController: UIViewController {
     
     // MARK: - User Actions
     @objc func createButtonDidTap() {
+        showLoading()
         declarationService.createDeclaration(nationalId: nationalIdTextField.text)
     }
 }
@@ -51,11 +52,13 @@ class DeclarationViewController: UIViewController {
 // MARK: - Delegates
 extension DeclarationViewController: DeclarationServiceDelegate {
     func declarationCreated() {
-        print("Created")
+        dismissLoading()
+        showAlert(title: "Great", message: "Your declaration has been created.")
     }
     
     func declarationFailed() {
-        print("Failed")
+        dismissLoading()
+        showAlert(title: "Oops!", message: "Your declaration has been failed.")
     }
 }
 

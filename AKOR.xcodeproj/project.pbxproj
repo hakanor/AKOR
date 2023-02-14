@@ -19,6 +19,9 @@
 		A79DFE67299AB430009EA831 /* NationalIdFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DFE66299AB430009EA831 /* NationalIdFormatterTests.swift */; };
 		A79DFE69299AD858009EA831 /* FormTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DFE68299AD858009EA831 /* FormTextField.swift */; };
 		A79DFE6B299ADDA5009EA831 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DFE6A299ADDA5009EA831 /* Formatter.swift */; };
+		A79DFE6F299BE6B6009EA831 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DFE6E299BE6B6009EA831 /* SpinnerViewController.swift */; };
+		A79DFE71299BEB51009EA831 /* AlertDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DFE70299BEB51009EA831 /* AlertDisplayable.swift */; };
+		A79DFE73299BEB95009EA831 /* LoaderDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DFE72299BEB95009EA831 /* LoaderDisplayable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		A79DFE66299AB430009EA831 /* NationalIdFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationalIdFormatterTests.swift; sourceTree = "<group>"; };
 		A79DFE68299AD858009EA831 /* FormTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTextField.swift; sourceTree = "<group>"; };
 		A79DFE6A299ADDA5009EA831 /* Formatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		A79DFE6E299BE6B6009EA831 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
+		A79DFE70299BEB51009EA831 /* AlertDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDisplayable.swift; sourceTree = "<group>"; };
+		A79DFE72299BEB95009EA831 /* LoaderDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderDisplayable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,9 @@
 				A79DFE6329992246009EA831 /* Resources */,
 				A79DFE68299AD858009EA831 /* FormTextField.swift */,
 				A79DFE6A299ADDA5009EA831 /* Formatter.swift */,
+				A79DFE70299BEB51009EA831 /* AlertDisplayable.swift */,
+				A79DFE72299BEB95009EA831 /* LoaderDisplayable.swift */,
+				A79DFE6E299BE6B6009EA831 /* SpinnerViewController.swift */,
 			);
 			path = AKOR;
 			sourceTree = "<group>";
@@ -231,10 +240,13 @@
 				A73B70EB2997D69100FD64DE /* DeclarationViewController.swift in Sources */,
 				A79DFE69299AD858009EA831 /* FormTextField.swift in Sources */,
 				A79DFE6B299ADDA5009EA831 /* Formatter.swift in Sources */,
+				A79DFE73299BEB95009EA831 /* LoaderDisplayable.swift in Sources */,
 				A73B70E72997D69100FD64DE /* AppDelegate.swift in Sources */,
 				A79DFE522998FB8E009EA831 /* DeclarationService.swift in Sources */,
 				A73B70E92997D69100FD64DE /* SceneDelegate.swift in Sources */,
 				A79DFE65299AB17B009EA831 /* NationalIdFormatter.swift in Sources */,
+				A79DFE6F299BE6B6009EA831 /* SpinnerViewController.swift in Sources */,
+				A79DFE71299BEB51009EA831 /* AlertDisplayable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
