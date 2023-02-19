@@ -32,7 +32,7 @@ class DeclarationViewController: UIViewController, AlertDisplayable, LoaderDispl
     }()
 
     // MARK: - Properties
-    private let declarationService = DeclarationService()
+    private let declarationService = DeclarationService(networkProvider: NetworkProvider())
     
     // MARK: - Lifecycle
     override func viewDidLoad() {

@@ -71,6 +71,5 @@ final class MockDeclarationServiceDelegate: DeclarationServiceDelegate {
     
     func declarationFailed() {
         declarationFailedCalled = true
-        
     }
 }

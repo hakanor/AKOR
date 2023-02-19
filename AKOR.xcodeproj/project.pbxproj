@@ -13,6 +13,7 @@
 		A73B70F02997D69400FD64DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A73B70EF2997D69400FD64DE /* Assets.xcassets */; };
 		A73B70F32997D69400FD64DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A73B70F12997D69400FD64DE /* LaunchScreen.storyboard */; };
 		A76ECD2229A1447200A3441F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A76ECD2129A1447200A3441F /* Alamofire */; };
+		A76ECD2429A14A6B00A3441F /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76ECD2329A14A6B00A3441F /* NetworkProvider.swift */; };
 		A79DFE522998FB8E009EA831 /* DeclarationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DFE512998FB8D009EA831 /* DeclarationService.swift */; };
 		A79DFE5A2998FFDC009EA831 /* AKORTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DFE592998FFDC009EA831 /* AKORTests.swift */; };
 		A79DFE6129990094009EA831 /* DeclarationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DFE6029990094009EA831 /* DeclarationServiceTests.swift */; };
@@ -43,6 +44,7 @@
 		A73B70EF2997D69400FD64DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A73B70F22997D69400FD64DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A73B70F42997D69400FD64DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A76ECD2329A14A6B00A3441F /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		A79DFE512998FB8D009EA831 /* DeclarationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclarationService.swift; sourceTree = "<group>"; };
 		A79DFE572998FFDC009EA831 /* AKORTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AKORTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A79DFE592998FFDC009EA831 /* AKORTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AKORTests.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				A79DFE70299BEB51009EA831 /* AlertDisplayable.swift */,
 				A79DFE72299BEB95009EA831 /* LoaderDisplayable.swift */,
 				A79DFE6E299BE6B6009EA831 /* SpinnerViewController.swift */,
+				A76ECD2329A14A6B00A3441F /* NetworkProvider.swift */,
 			);
 			path = AKOR;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				A73B70E72997D69100FD64DE /* AppDelegate.swift in Sources */,
 				A79DFE522998FB8E009EA831 /* DeclarationService.swift in Sources */,
 				A73B70E92997D69100FD64DE /* SceneDelegate.swift in Sources */,
+				A76ECD2429A14A6B00A3441F /* NetworkProvider.swift in Sources */,
 				A79DFE65299AB17B009EA831 /* NationalIdFormatter.swift in Sources */,
 				A79DFE6F299BE6B6009EA831 /* SpinnerViewController.swift in Sources */,
 				A79DFE71299BEB51009EA831 /* AlertDisplayable.swift in Sources */,
