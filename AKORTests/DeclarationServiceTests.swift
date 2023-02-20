@@ -14,7 +14,7 @@ final class DeclarationServiceTests: XCTestCase {
 
     override func setUpWithError() throws {
         try super.setUpWithError()
-        sut = DeclarationService()
+        //sut = DeclarationService()
         delegate = MockDeclarationServiceDelegate()
         sut.delegate = delegate
     }
