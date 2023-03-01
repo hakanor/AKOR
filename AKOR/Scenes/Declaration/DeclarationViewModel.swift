@@ -7,6 +7,7 @@
 
 protocol DeclarationViewModelDelegate: AnyObject {
     func dataFetchDidStart()
+    func errorMessageDidDisplay()
 }
 
 final class DeclarationViewModel {
@@ -20,8 +21,9 @@ final class DeclarationViewModel {
     }
     
     func createButtonDidTap(nationalId: String?) {
-        guard nationalId != nil else {
-            // TODO: Show error message 
+        guard nationalId != "" else {
+            // TODO: Show error message
+            delegate?.errorMessageDidDisplay()
             return
         }
         delegate?.dataFetchDidStart()

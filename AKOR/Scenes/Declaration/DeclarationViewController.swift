@@ -63,6 +63,11 @@ class DeclarationViewController: UIViewController, AlertDisplayable, LoaderDispl
 //}
 
 extension DeclarationViewController: DeclarationViewModelDelegate {
+    func errorMessageDidDisplay() {
+        dismissLoading()
+        showAlert(title: "Error", message: "NationalId cannot be nil.")
+    }
+    
     func dataFetchDidStart() {
         showLoading()
     }
