@@ -40,6 +40,18 @@ final class DeclarationViewModelTests: XCTestCase {
         XCTAssertTrue(declarationService.createDeclarationCalled)
         XCTAssertEqual(nationalId, declarationService.passedNationalId)
     }
+    
+    func test_error_message_did_display_should_be_called_when_national_id_is_nil() {
+        // Given
+        let nationalId = ""
+        
+        // When
+        sut.createButtonDidTap(nationalId: nationalId)
+        
+        // Then
+        XCTAssertFalse(delegate.dataFetchDidStartCalled)
+        XCTAssertTrue(delegate.errorMessageDidDisplayCalled)
+    }
 
 }
 
@@ -57,6 +69,12 @@ final class MockDeclarationService: DeclarationServiceProtocol {
 }
 
 final class MockDeclarationViewModelDelegate: DeclarationViewModelDelegate {
+    var errorMessageDidDisplayCalled = false
+    
+    func errorMessageDidDisplay() {
+        errorMessageDidDisplayCalled = true
+    }
+    
     var dataFetchDidStartCalled = false
 
     func dataFetchDidStart() {
