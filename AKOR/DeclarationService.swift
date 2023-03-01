@@ -12,11 +12,16 @@ protocol DeclarationServiceDelegate: AnyObject {
     func declarationFailed()
 }
 
-final class DeclarationService {
+protocol DeclarationServiceProtocol {
+    func createDeclaration(nationalId: String?)
+    var delegate: DeclarationServiceDelegate? { get set }
+}
+
+final class DeclarationService: DeclarationServiceProtocol {
     weak var delegate: DeclarationServiceDelegate?
     private let networkProvider: NetworkProvidable
     
-    init(networkProvider: NetworkProvidable) {
+    init(networkProvider: NetworkProvidable = NetworkProvider()) {
         self.networkProvider = networkProvider
     }
     
