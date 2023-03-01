@@ -24,6 +24,8 @@
 		A79DFE6F299BE6B6009EA831 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DFE6E299BE6B6009EA831 /* SpinnerViewController.swift */; };
 		A79DFE71299BEB51009EA831 /* AlertDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DFE70299BEB51009EA831 /* AlertDisplayable.swift */; };
 		A79DFE73299BEB95009EA831 /* LoaderDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DFE72299BEB95009EA831 /* LoaderDisplayable.swift */; };
+		A7D6708E29AE9CA0001C2D09 /* DeclarationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D6708D29AE9CA0001C2D09 /* DeclarationViewModel.swift */; };
+		A7D6709229AEA548001C2D09 /* DeclarationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D6709129AEA548001C2D09 /* DeclarationViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		A79DFE6E299BE6B6009EA831 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		A79DFE70299BEB51009EA831 /* AlertDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDisplayable.swift; sourceTree = "<group>"; };
 		A79DFE72299BEB95009EA831 /* LoaderDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderDisplayable.swift; sourceTree = "<group>"; };
+		A7D6708D29AE9CA0001C2D09 /* DeclarationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclarationViewModel.swift; sourceTree = "<group>"; };
+		A7D6709129AEA548001C2D09 /* DeclarationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeclarationViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +102,7 @@
 		A73B70E52997D69100FD64DE /* AKOR */ = {
 			isa = PBXGroup;
 			children = (
-				A73B70EA2997D69100FD64DE /* DeclarationViewController.swift */,
+				A7D6708B29AE97AA001C2D09 /* Scenes */,
 				A79DFE512998FB8D009EA831 /* DeclarationService.swift */,
 				A79DFE64299AB17B009EA831 /* NationalIdFormatter.swift */,
 				A73B70F42997D69400FD64DE /* Info.plist */,
@@ -120,6 +124,7 @@
 				A79DFE592998FFDC009EA831 /* AKORTests.swift */,
 				A79DFE6029990094009EA831 /* DeclarationServiceTests.swift */,
 				A79DFE66299AB430009EA831 /* NationalIdFormatterTests.swift */,
+				A7D6709129AEA548001C2D09 /* DeclarationViewModelTests.swift */,
 			);
 			path = AKORTests;
 			sourceTree = "<group>";
@@ -140,6 +145,23 @@
 				A73B70EF2997D69400FD64DE /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A7D6708B29AE97AA001C2D09 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A7D6708C29AE97BB001C2D09 /* Declaration */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A7D6708C29AE97BB001C2D09 /* Declaration */ = {
+			isa = PBXGroup;
+			children = (
+				A73B70EA2997D69100FD64DE /* DeclarationViewController.swift */,
+				A7D6708D29AE9CA0001C2D09 /* DeclarationViewModel.swift */,
+			);
+			path = Declaration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +273,7 @@
 				A73B70EB2997D69100FD64DE /* DeclarationViewController.swift in Sources */,
 				A79DFE69299AD858009EA831 /* FormTextField.swift in Sources */,
 				A79DFE6B299ADDA5009EA831 /* Formatter.swift in Sources */,
+				A7D6708E29AE9CA0001C2D09 /* DeclarationViewModel.swift in Sources */,
 				A79DFE73299BEB95009EA831 /* LoaderDisplayable.swift in Sources */,
 				A73B70E72997D69100FD64DE /* AppDelegate.swift in Sources */,
 				A79DFE522998FB8E009EA831 /* DeclarationService.swift in Sources */,
@@ -269,6 +292,7 @@
 				A79DFE6129990094009EA831 /* DeclarationServiceTests.swift in Sources */,
 				A79DFE5A2998FFDC009EA831 /* AKORTests.swift in Sources */,
 				A79DFE67299AB430009EA831 /* NationalIdFormatterTests.swift in Sources */,
+				A7D6709229AEA548001C2D09 /* DeclarationViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
