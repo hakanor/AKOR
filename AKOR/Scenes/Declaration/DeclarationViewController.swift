@@ -32,33 +32,39 @@ class DeclarationViewController: UIViewController, AlertDisplayable, LoaderDispl
     }()
 
     // MARK: - Properties
-    private let declarationService = DeclarationService(networkProvider: NetworkProvider())
+    private let declarationViewModel = DeclarationViewModel()
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        declarationService.delegate = self
+        declarationViewModel.delegate = self
         setupViews()
     }
     
     // MARK: - User Actions
     @objc func createButtonDidTap() {
         showLoading()
-        declarationService.createDeclaration(nationalId: nationalIdTextField.text)
+        declarationViewModel.createButtonDidTap(nationalId: nationalIdTextField.text)
     }
 }
 
 // MARK: - Delegates
-extension DeclarationViewController: DeclarationServiceDelegate {
-    func declarationCreated() {
-        dismissLoading()
-        showAlert(title: "Great", message: "Your declaration has been created.")
-    }
-    
-    func declarationFailed() {
-        dismissLoading()
-        showAlert(title: "Oops!", message: "Your declaration has been failed.")
+//extension DeclarationViewController: DeclarationServiceDelegate {
+//    func declarationCreated() {
+//        dismissLoading()
+//        showAlert(title: "Great", message: "Your declaration has been created.")
+//    }
+//
+//    func declarationFailed() {
+//        dismissLoading()
+//        showAlert(title: "Oops!", message: "Your declaration has been failed.")
+//    }
+//}
+
+extension DeclarationViewController: DeclarationViewModelDelegate {
+    func dataFetchDidStart() {
+        showLoading()
     }
 }
 
